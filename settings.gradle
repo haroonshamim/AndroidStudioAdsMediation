@@ -4,6 +4,13 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+
+        //FOR IRONSOURCE
+        //If you’re using Gradle version 7+, update your repository section on your settings.gradle file, instead of build.gradle
+        
+        maven {
+            url 'https://android-sdk.is.com/'
+        }
     }
 }
 rootProject.name = "TEST"

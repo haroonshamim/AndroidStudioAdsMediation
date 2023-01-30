@@ -18,4 +18,13 @@
     <string name="applovin_banner_ad_unit_id">0615e0153ae51af6</string>
     <string name="applovin_rewarded_ad_unit_id">e0c193c9e2ae3dde</string>
 
+
+    <string name="IRONSOUCE_APP_KEY">85460dc</string>
+    <string name="IRONSOURCE_FALLBACK_USER_ID">85460dcd</string>
+    <string name="applovin_rewarded_ad_unit_id">e0c193c9e2ae3dde</string>
+
+    private final String TAG = "DemoActivity";
+    private final String APP_KEY = "85460dcd";
+    private final String FALLBACK_USER_ID = "userId";
+
 </resources>

@@ -39,7 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //-------------------------------------------ADMOB MEDIATORS--------------------------------------//
+    //-------------------------------------------ADMOB MEDIATOR--------------------------------------//
 
     //ADMOB ADNETWORK FOR ADMOB MEDIATOR
     implementation 'com.google.android.gms:play-services-ads:21.4.0'
@@ -54,25 +54,41 @@ dependencies {
     implementation  'com.unity3d.ads:unity-ads:4.5.0'
     implementation 'com.google.ads.mediation:unity:4.5.0.0'//Unity Ads SDK 4.5.0.
 
+    //IRON SOURCE MEDIATION FOR ADMOB MEDIATOR
+    implementation  'com.google.ads.mediation:ironsource:7.2.7.0'
 
-    //-------------------------------------------APPLOVIN MEDIATORS--------------------------------------//
 
 
-    //APPLOVIN MEDIATION
+
+
+    //-------------------------------------------APPLOVIN MEDIATOR--------------------------------------//
+    //ADMOB ADAPTER FOR APPLOVIN MEDIATION
+    implementation 'com.applovin.mediation:google-adapter:21.4.0.1'
+    //UNITY ADS ADAPTER FOR APPLOVIN MEDIATION
+    implementation 'com.applovin.mediation:unityads-adapter:4.5.0.2' //Unity Ads Sdk 4.5.0
+
+    //IRON SOURCE ADAPTER FOR APPLOVIN MEDIATION
+    //applovin-sdk:11.6.1 supports 7.2.6.0.1 but it is minor change so it is suitable
+    implementation 'com.applovin.mediation:ironsource-adapter:7.2.7.0.0'//IRON SOURCE SDK 7.2.7.0
+
+
+    //MINTEGRAL ADAPTER FOR APPLOVIN MEDIATION
+    //applovin-sdk:11.6.1 supports 16.3.21.0  but it is minor change so it is ignoreable
+    implementation 'com.applovin.mediation:mintegral-adapter:16.3.51.1' // MINTEGRAL SDK 16.3.51
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+
+    //////////////////////////////////////////////////////////ADNETWORK MEDIATORS/////////////////////////////////////////////
+
+
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
     //The latest version is 11.7.0 but for admob meditoor integreation with applovin we will use applovin sdk of 11.6.0
-
     //implementation("com.applovin:applovin-sdk:11.7.0")
     implementation("com.applovin:applovin-sdk:11.6.1")
 
 
 
-    //ADMOB ADAPTER FOR APPLOVIN MEDIATION
-    implementation 'com.applovin.mediation:google-adapter:21.4.0.1'
 
-
-
-    //UNITY ADS ADAPTER FOR APPLOVIN MEDIATION
-    implementation 'com.applovin.mediation:unityads-adapter:4.5.0.2' //Unity Ads Sdk 4.5.0
 
 
 

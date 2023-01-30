@@ -52,6 +52,7 @@ import com.example.test.databinding.ActivityMainBinding;
 import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+import com.ironsource.mediationsdk.IronSource;
 
 public class MainActivity extends AppCompatActivity implements MaxAdViewAdListener, MaxRewardedAdListener {
     // Remove the below line after defining your own ad unit ID.
@@ -238,9 +239,15 @@ public class MainActivity extends AppCompatActivity implements MaxAdViewAdListen
                             adapterClass, status.getDescription(), status.getLatency()));
 
 
+
                     AppLovinPrivacySettings.setHasUserConsent(true, context);
                     AppLovinPrivacySettings.setIsAgeRestrictedUser(true, context);
                     AppLovinPrivacySettings.setDoNotSell(true, context);
+                    IronSource.setMetaData("do_not_sell", "true");
+
+
+                    IronSource.setConsent(true);
+
 
                     Bundle extras = new AppLovinExtras.Builder()
                             .setMuteAudio(true)
@@ -681,6 +688,18 @@ public class MainActivity extends AppCompatActivity implements MaxAdViewAdListen
     }
 
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        IronSource.onResume(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        IronSource.onPause(this);
+    }
 
 
 
