@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.zatg.child.scarygames"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //Style related Dependencies
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.6.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //-------------------------------------------ADMOB MEDIATORS--------------------------------------//
+
+    //ADMOB ADNETWORK FOR ADMOB MEDIATOR
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+
+    //APLOVIN MEDIATION FOR ADMOB MEDIATOR
+    implementation  'com.google.ads.mediation:applovin:11.6.1.0'
+    //It uses applovin sdk 11.6.1
+
+
+
+    //UNITY ADS MEDIATION FOR ADMOB MEDIATOR
+    implementation  'com.unity3d.ads:unity-ads:4.5.0'
+    implementation 'com.google.ads.mediation:unity:4.5.0.0'//Unity Ads SDK 4.5.0.
+
+
+    //-------------------------------------------APPLOVIN MEDIATORS--------------------------------------//
+
+
+    //APPLOVIN MEDIATION
+    //The latest version is 11.7.0 but for admob meditoor integreation with applovin we will use applovin sdk of 11.6.0
+
+    //implementation("com.applovin:applovin-sdk:11.7.0")
+    implementation("com.applovin:applovin-sdk:11.6.1")
+
+
+
+    //ADMOB ADAPTER FOR APPLOVIN MEDIATION
+    implementation 'com.applovin.mediation:google-adapter:21.4.0.1'
+
+
+
+    //UNITY ADS ADAPTER FOR APPLOVIN MEDIATION
+    implementation 'com.applovin.mediation:unityads-adapter:4.5.0.2' //Unity Ads Sdk 4.5.0
+
+
+
+}
